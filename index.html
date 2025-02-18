@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            padding: 10px;
+        }
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(90, 55, 180);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .loading-screen img {
+            width: 100px;  /* Reducir el tamaño de la imagen */
+            height: auto;
+            animation: fadeInOut 5s ease-in-out infinite;
+        }
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0.3;
+                transform: scale(0.9);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0.3;
+                transform: scale(0.9);
+            }
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                window.location.href = 'index1.html';
+            }, 6000);
+        };
+    </script>
+</head>
+<body>
+    <div class="loading-screen">
+        <img src="src/img/logo.png" alt="Logo">
+    </div>
+</body>
+</html>

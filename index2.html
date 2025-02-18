@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación Exitosa</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #ffffff, #d6c1ff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: black;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .check-img {
+            width: 80px;
+            margin: 20px 0;
+        }
+        .message {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .logo-img {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="logo-img" src="src/img/logo3.png" alt="Logo">
+        <h2 style="font-weight: 600;">¡Verificación Exitosa!</h2>
+        <img class="check-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Yes_Check_Circle.svg/2048px-Yes_Check_Circle.svg.png" alt="Check">
+        <p class="message">Tu cuenta ha sido desbloqueada. Ahora puedes seguir disfrutando de nuestros servicios.</p>
+        <p class="message">Tu seguridad es nuestra prioridad.</p>
+    </div>
+    
+    <script>
+        setTimeout(function() {
+            if (window.opener) {
+                window.close();
+            } else {
+                window.location.href = "about:blank";
+                setTimeout(function() {
+                    window.close();
+                }, 500);
+            }
+        }, 7000);
+    </script>
+</body>
+</html>
